@@ -95,7 +95,7 @@ class Main3Activity : AppCompatActivity() {
 
         val myData = FirebaseDatabase
             .getInstance().getReference("Orders")
-        val order = Order(llong,llate,dlong,dlate,size,name)
+        val order = order(llong,llate,dlong,dlate,size,name)
         val orderID = order.orderName
         myData.child(orderID).setValue(order).addOnCompleteListener {
             Toast.makeText(this,"Order placed",Toast.LENGTH_LONG).show()

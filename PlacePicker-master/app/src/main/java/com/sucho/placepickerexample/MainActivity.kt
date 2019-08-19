@@ -18,7 +18,23 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
 
         }
+        findViewById<Button>(R.id.orderList).setOnClickListener {
+            val intent = Intent(this,Main2Activity::class.java)
+            startActivity(intent)
+        }
     }
 
 
 }
+
+class order(val loctionLongTude:String
+            , val locationLatetude:String
+            , val destinationLongtude:String
+            , val destinationLatetude:String
+            , val orderName:String
+            , val size:String){
+    constructor():this("0.0","0.0","0.0","0.0","0.0","0.0"){
+
+    }
+}
+
