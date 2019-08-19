@@ -1,8 +1,11 @@
 package com.sucho.placepickerexample
 
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 
 
@@ -22,7 +25,22 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this,Main2Activity::class.java)
             startActivity(intent)
         }
+        findViewById<ImageButton>(R.id.imageButton2).setOnClickListener {
+            alert()
+        }
     }
+    /////////////////
+
+    private fun alert(){
+
+
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Info")
+        builder.setMessage("Welcome to TRA-admin app, here you can register new users and make orders and check orders progress")
+        builder.setPositiveButton("ok",{ dialogInterface: DialogInterface, i: Int -> })
+        builder.show()
+    }
+
 
 
 }
