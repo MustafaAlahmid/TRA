@@ -28,6 +28,11 @@ class MainActivity : AppCompatActivity() {
         findViewById<ImageButton>(R.id.imageButton2).setOnClickListener {
             alert()
         }
+
+        findViewById<Button>(R.id.rUser).setOnClickListener {
+            intent = Intent(this,acount::class.java)
+            startActivity(intent)
+        }
     }
     /////////////////
 

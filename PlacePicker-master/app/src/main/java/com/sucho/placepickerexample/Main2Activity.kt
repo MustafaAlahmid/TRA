@@ -43,6 +43,14 @@ class Main2Activity : AppCompatActivity() {
             val Llate = orderList.get(position).locationLatetude
             val Dlate = orderList.get(position).destinationLatetude
             val Dlong = orderList.get(position).destinationLongtude
+
+            intent = Intent(this,MapsActivity::class.java)
+                .putExtra("name",name)
+                .putExtra("Llong",Llong)
+                .putExtra("Llate",Llate)
+                .putExtra("Dlong",Dlong)
+                .putExtra("Dlate",Dlate)
+            startActivity(intent)
         }
 
     }
